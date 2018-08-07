@@ -1,0 +1,1 @@
+UPDATE orgentry SET elocustomerkey = 1 WHERE orgentrydesc = 'Graywolf Press'

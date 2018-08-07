@@ -1,0 +1,2 @@
+ALTER FULLTEXT INDEX ON bookcomments SET STOPLIST = OFF
+go

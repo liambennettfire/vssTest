@@ -1,0 +1,1 @@
+cispubtmm-in.bat > cispubtmm-in-daily.log

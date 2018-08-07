@@ -1,0 +1,6 @@
+user name here
+password
+directory
+ascii
+get file name here
+quit

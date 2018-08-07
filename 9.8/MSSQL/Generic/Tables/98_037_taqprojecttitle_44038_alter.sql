@@ -1,0 +1,2 @@
+ALTER TABLE taqprojecttitle
+ADD selectedversionformatkey INT

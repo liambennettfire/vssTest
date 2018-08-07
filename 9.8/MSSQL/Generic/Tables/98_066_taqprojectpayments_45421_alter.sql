@@ -1,0 +1,2 @@
+ALTER TABLE taqprojectpayments
+ADD paymentmethodcode INT NULL

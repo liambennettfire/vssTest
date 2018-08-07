@@ -1,0 +1,2 @@
+ALTER TABLE taqprojectcontactrole
+ADD taqversionformatkey INT NULL

@@ -1,0 +1,12 @@
+Please follow these instructions in order
+
+On client database:
+1. Run coverURL_validelofieldid.sql ----- Inserts to Valid Eloquence Field Ids gentable
+
+2. Run coverURL_bookmiscitems.sql ----- Inserts to Miscellaneous Item Setup in desktop TM
+
+3. Run elo_create_cover_image_URL ----- Places procedure on database
+
+4. Setup job - Schedule for every 10 mins - Add advanced logging option and note this in the description.
+
+5. Add item type filtering for gentables 543 qsijobtype for Titles and Job.

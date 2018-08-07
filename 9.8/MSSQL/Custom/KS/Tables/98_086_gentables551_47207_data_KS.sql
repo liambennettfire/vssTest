@@ -1,0 +1,1 @@
+UPDATE gentables SET alternatedesc2='EXEC qean_generate_itemnumber_ks 1, @bookkey, @result OUTPUT, @errorcode OUTPUT, @errordesc OUTPUT' WHERE tableid=551 and qsicode=6

@@ -1,0 +1,6 @@
+pns
+leberwurst
+cd sy1:[pub.liv30.dat]
+ascii
+get YTMUPD1.PRN
+quit

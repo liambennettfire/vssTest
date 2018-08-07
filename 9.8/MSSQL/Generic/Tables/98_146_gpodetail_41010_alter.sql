@@ -1,0 +1,1 @@
+ALTER TABLE gpodetail ALTER COLUMN detail VARCHAR(6000)

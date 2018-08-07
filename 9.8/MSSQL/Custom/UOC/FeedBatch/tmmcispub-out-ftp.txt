@@ -1,0 +1,8 @@
+ctp001
+255
+CD UoC/cgates/
+ascii
+put tmmtocispub_title*.txt
+put tmmtocispub_auth*.txt
+put tmmtocispub_subj*.txt
+quit

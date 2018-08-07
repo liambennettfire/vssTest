@@ -1,0 +1,13 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[BOOKPRICE_VIEW]') and OBJECTPROPERTY(id, N'IsView') = 1)
+  drop view [dbo].[BOOKPRICE_VIEW]
+GO
+create view dbo.BOOKPRICE_VIEW(BOOKKEY, CURRENCYTYPE, PRICETYPE)  AS 
+  SELECT p.BOOKKEY, c.DATADESC AS CURRENCYTYPE, t.DATADESC AS PRICETYPE
+    FROM dbo.BOOKPRICE p, dbo.CURRENCY_VIEW c, dbo.PRICETYPE_VIEW t
+    WHERE ((p.PRICETYPECODE = t.DATACODE) AND 
+            (p.CURRENCYTYPECODE = c.DATACODE))
+
+
+go
+GRANT SELECT ON BOOKPRICE_VIEW TO public
+go

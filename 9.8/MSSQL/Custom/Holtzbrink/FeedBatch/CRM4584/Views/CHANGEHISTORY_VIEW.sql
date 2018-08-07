@@ -1,0 +1,38 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[CHANGEHISTORY_VIEW]') and OBJECTPROPERTY(id, N'IsView') = 1)
+  drop view [dbo].[CHANGEHISTORY_VIEW]
+GO
+create view dbo.CHANGEHISTORY_VIEW(BOOKKEY, FIELDDESC, STRINGVALUE, CURRENTSTRINGVALUE, LASTMAINTDATE, LASTUSERID)  AS 
+
+  /*****
+  *  INFO ORA2MS-6002 line: 9 col: 1: WHERE clause was transformed to the join's conditions in the FROM clause.
+  *****/
+
+  SELECT 
+      dbo.WHTITLEINFO.BOOKKEY, 
+      dbo.TITLEHISTORY.FIELDDESC, 
+      dbo.TITLEHISTORY.STRINGVALUE, 
+      dbo.TITLEHISTORY.CURRENTSTRINGVALUE, 
+      dbo.TITLEHISTORY.LASTMAINTDATE, 
+      dbo.TITLEHISTORY.LASTUSERID
+    FROM dbo.TITLEHISTORY
+       LEFT JOIN dbo.WHTITLEINFO  ON (dbo.TITLEHISTORY.BOOKKEY = dbo.WHTITLEINFO.BOOKKEY)
+  UNION
+
+  /*****
+  *  INFO ORA2MS-6002 line: 19 col: 1: WHERE clause was transformed to the join's conditions in the FROM clause.
+  *****/
+
+  SELECT 
+      dbo.WHTITLEINFO.BOOKKEY, 
+      CAST( dbo.DATEHISTORY.DATETYPECODE AS varchar(100)) AS FIELDDESC, 
+      CAST( dbo.DATEHISTORY.DATEPRIOR AS varchar(100)) AS STRINGVALUE, 
+      CAST( dbo.DATEHISTORY.DATECHANGED AS varchar(100)) AS CURRENTSTRINGVALUE, 
+      dbo.DATEHISTORY.LASTMAINTDATE, 
+      dbo.DATEHISTORY.LASTUSERID
+    FROM dbo.DATEHISTORY
+       LEFT JOIN dbo.WHTITLEINFO  ON (dbo.DATEHISTORY.BOOKKEY = dbo.WHTITLEINFO.BOOKKEY)
+
+
+go
+GRANT SELECT ON CHANGEHISTORY_VIEW TO public
+go

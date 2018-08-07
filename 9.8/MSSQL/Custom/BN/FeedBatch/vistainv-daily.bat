@@ -1,0 +1,1 @@
+vistainv.bat > vistainv-daily.log

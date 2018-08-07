@@ -1,0 +1,1 @@
+websitesout.bat > c:\websitesoutmonthly.log

@@ -1,0 +1,7 @@
+ctp001
+255
+CD UoC/cgates/subjects
+ascii
+put subject.idx
+put *.htm
+quit

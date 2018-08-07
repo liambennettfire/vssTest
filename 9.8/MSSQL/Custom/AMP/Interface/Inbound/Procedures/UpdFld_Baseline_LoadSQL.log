@@ -1,0 +1,12 @@
+The module 'UpdFld_FinalPrice' depends on the missing object 'qtitle_get_next_history_order'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_FinalPrice' depends on the missing object 'dbo.UpdFld_FinalPrice_ResortPriceList'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_XVQ_ActiveDate' depends on the missing object 'UpdFld_XVQ_QsiJob_MessageBuilder'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_XVQ_ActiveDate' depends on the missing object 'dbo.UpdFld_XVQ_QsiJob_WriteMessage'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_XVQ_FinalPrice' depends on the missing object 'UpdFld_XVQ_QsiJob_MessageBuilder'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_XVQ_FinalPrice' depends on the missing object 'dbo.UpdFld_XVQ_QsiJob_WriteMessage'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_XVQ_MiscItem' depends on the missing object 'UpdFld_XVQ_QsiJob_MessageBuilder'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_XVQ_MiscItem' depends on the missing object 'dbo.UpdFld_XVQ_QsiJob_WriteMessage'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_XVQ_QsiJob_End' depends on the missing object 'dbo.UpdFld_XVQ_QsiJob_ErrorStats'. The module will still be created; however, it cannot run successfully until the object exists.
+The module 'UpdFld_XVQ_QsiJob_End' depends on the missing object 'dbo.UpdFld_XVQ_QsiJob_WriteMessage'. The module will still be created; however, it cannot run successfully until the object exists.
+Msg 137, Level 15, State 2, Server MONTY, Procedure UpdFld_XVQ_Validate_Table_NonExistentIgnoreZero, Line 19
+Must declare the scalar variable "@pricecode".

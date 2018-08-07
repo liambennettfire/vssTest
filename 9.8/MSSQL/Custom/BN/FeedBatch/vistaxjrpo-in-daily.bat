@@ -1,0 +1,1 @@
+vistaxjrpo-in.bat > vistaxjrpo-in-daily.log

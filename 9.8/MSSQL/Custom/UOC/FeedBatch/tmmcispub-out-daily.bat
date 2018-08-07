@@ -1,0 +1,1 @@
+tmmcispub-out.bat > tmmcispub-out-daily.log

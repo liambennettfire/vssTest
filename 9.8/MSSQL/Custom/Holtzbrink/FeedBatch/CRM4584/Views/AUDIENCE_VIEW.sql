@@ -1,0 +1,14 @@
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[AUDIENCE_VIEW]') and OBJECTPROPERTY(id, N'IsView') = 1)
+  drop view [dbo].[AUDIENCE_VIEW]
+GO
+
+create view dbo.AUDIENCE_VIEW(BOOKKEY, SORTORDER, DATADESC)  AS 
+
+  SELECT dbo.BOOKAUDIENCE.BOOKKEY, dbo.BOOKAUDIENCE.SORTORDER, dbo.GENTABLES.DATADESC
+    FROM dbo.BOOKAUDIENCE, dbo.GENTABLES
+    WHERE ((dbo.BOOKAUDIENCE.AUDIENCECODE = dbo.GENTABLES.DATACODE) AND 
+            (dbo.GENTABLES.TABLEID = 460))
+
+go
+GRANT SELECT ON AUDIENCE_VIEW TO public
+go
