@@ -1,0 +1,7 @@
+ctp001
+255
+CD UoC/cgates/series
+ascii
+put series.idx
+put *.htm
+quit

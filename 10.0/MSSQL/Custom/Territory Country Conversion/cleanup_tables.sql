@@ -1,0 +1,4 @@
+drop table elo_full_rights_by_territory
+go
+drop table gentables_eloprod
+go

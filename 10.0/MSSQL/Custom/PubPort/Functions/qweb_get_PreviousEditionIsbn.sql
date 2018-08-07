@@ -1,0 +1,149 @@
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[qweb_get_PreviousEditionIsbn]') and xtype in (N'FN', N'IF', N'TF'))
+drop function [dbo].[qweb_get_PreviousEditionIsbn]
+GO
+
+
+
+
+CREATE FUNCTION dbo.qweb_get_PreviousEditionIsbn(
+		@i_bookkey	INT,
+		@i_isbn_type	INT)
+
+/*	PARAMETER @i_isbn_type
+		10 = ISBN10
+		13 = ISBN 13
+		16 = EAN
+		17 = EAN (no dashes)
+		18 = GTIN
+		19 = GTIN (no dashes)
+		20 = LCCN
+		21 = UPC
+*/
+	RETURNS VARCHAR(50)
+	
+AS
+BEGIN
+	DECLARE @RETURN			VARCHAR(50)
+	DECLARE @v_desc			VARCHAR(50)
+	DECLARE @v_curr_title		VARCHAR(255)
+	DECLARE @i_curr_authorkey	INT
+	DECLARE @i_prev_authorkey	INT
+	DECLARE @i_prev_bookkey		INT
+	DECLARE @i_prev_bookkey_count	INT
+
+	SELECT @v_curr_title = dbo.qweb_get_Title(@i_bookkey,'T')
+	SELECT @i_curr_authorkey = authorkey
+		FROM bookauthor
+		WHERE bookkey=@i_bookkey
+		AND   sortorder = 1
+
+/* try to find an exact match on Title and author key */
+	SELECT @i_prev_bookkey = 0
+	SELECT @i_prev_bookkey_count = 0
+	SELECT @i_prev_bookkey_count = count(*)
+		FROM book
+		WHERE SUBSTRING(Title,1,25) = SUBSTRING(@v_curr_title,1,25)
+		AND  bookkey <> @i_bookkey
+		AND dbo.qweb_get_BestPubDate(bookkey,1) < dbo.qweb_get_BestPubDate(@i_bookkey,1)
+		AND dbo.qweb_get_Authorkey(bookkey,1) = dbo.qweb_get_Authorkey(@i_bookkey,1)
+
+	IF @i_prev_bookkey_count = 0
+		BEGIN
+			SELECT @RETURN = ''
+		END
+	ELSE 
+		BEGIN
+			SELECT  DISTINCT TOP 1 @i_prev_bookkey = bookkey
+				FROM book
+				WHERE SUBSTRING(Title,1,25) = SUBSTRING(@v_curr_title,1,25)
+				AND  bookkey <> @i_bookkey
+				AND dbo.qweb_get_BestPubDate(bookkey,1) < dbo.qweb_get_BestPubDate(@i_bookkey,1)
+				AND dbo.qweb_get_Authorkey(bookkey,1) = dbo.qweb_get_Authorkey(@i_bookkey,1)
+				ORDER BY dbo.qweb_get_BestPubDate(bookkey,1)
+		
+		
+
+			IF @i_isbn_type = 10
+				BEGIN
+					SELECT @v_desc = isbn10
+					FROM isbn
+					WHERE bookkey = @i_bookkey
+				END
+		
+			ELSE IF @i_isbn_type = 13
+				BEGIN
+					SELECT @v_desc = isbn
+					FROM isbn
+					WHERE bookkey = @i_bookkey
+				END								
+
+			ELSE IF @i_isbn_type = 16
+				BEGIN
+					SELECT @v_desc = ean
+					FROM isbn
+					WHERE bookkey = @i_bookkey
+				END
+			ELSE IF @i_isbn_type = 17
+				BEGIN
+					SELECT @v_desc = ean13
+					FROM isbn
+					WHERE bookkey = @i_bookkey
+				END
+			ELSE IF @i_isbn_type = 18
+				BEGIN
+					SELECT @v_desc = gtin
+					FROM isbn
+					WHERE bookkey = @i_bookkey
+				END
+			ELSE IF @i_isbn_type = 19
+				BEGIN
+					SELECT @v_desc = gtin14
+					FROM isbn
+					WHERE bookkey = @i_bookkey
+				END
+			ELSE IF @i_isbn_type = 20
+				BEGIN
+					SELECT @v_desc = lccn
+					FROM isbn
+					WHERE bookkey = @i_bookkey
+				END
+			ELSE IF @i_isbn_type = 21
+				BEGIN
+					SELECT @v_desc = upc
+					FROM isbn
+					WHERE bookkey = @i_bookkey
+				END
+			IF LEN(@v_desc) > 0
+				BEGIN
+					SELECT @RETURN = LTRIM(RTRIM(@v_desc))
+				END
+			ELSE
+				BEGIN
+					SELECT @RETURN = ''
+				END
+		END
+  RETURN @RETURN
+END
+
+
+
+
+
+
+
+
+
+
+
+
+GO
+SET QUOTED_IDENTIFIER OFF 
+GO
+SET ANSI_NULLS ON 
+GO
+

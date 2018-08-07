@@ -1,0 +1,6 @@
+ctp001
+255
+CD UoC/cgates/catalogs
+ascii
+put *.html
+quit

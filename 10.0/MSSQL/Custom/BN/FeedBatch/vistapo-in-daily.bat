@@ -1,0 +1,1 @@
+vistapo-in.bat > vistapo-in-daily.log

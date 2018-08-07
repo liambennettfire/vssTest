@@ -1,0 +1,103 @@
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_NULLS ON
+GO
+IF EXISTS (
+	SELECT *
+	FROM dbo.sysobjects
+	WHERE id = Object_id('dbo.udf_Parse_HTML_Lists') AND type = 'FN'
+	)
+BEGIN
+	DROP FUNCTION dbo.udf_Parse_HTML_Lists
+END
+GO
+
+CREATE FUNCTION dbo.udf_Parse_HTML_Lists (@szINPUT NVARCHAR(max))
+RETURNS XML
+AS
+BEGIN
+	DECLARE @HTMLTags_ListMaker AS TABLE  (
+			INCR INT IDENTITY(1,1) NOT NULL
+			,TextSegment NVARCHAR(max)
+			,NestLevel INT DEFAULT 0
+			,IsOpen BIT DEFAULT 0
+			,IsClose BIT DEFAULT 0
+			,TagType NVARCHAR(4)
+			,WorkText NVARCHAR(max)
+			,ItemCounter INT
+			,ItemCounterStart INT
+			,ProcessedText NVARCHAR(max))
+	
+	DECLARE @XML XML
+	
+	DECLARE @OL_START INT
+	DECLARE @OL_END INT 
+	DECLARE @UL_START INT 
+	DECLARE @UL_END INT 
+
+	DECLARE @FIRST_TAG INT 
+	DECLARE @FIRST_TAG_NAME NVARCHAR(5)
+	DECLARE @FIRST_TAG_TYPE NVARCHAR(2)
+
+	DECLARE @TextSegment NVARCHAR(max) 
+
+	SET @OL_START = 0
+	SET @OL_END = 0
+	SET @UL_START = 0
+	SET @UL_END = 0
+	SET @FIRST_TAG = 0
+	SET @FIRST_TAG_NAME = ''
+	SET @FIRST_TAG_TYPE = ''
+	SET @TextSegment = ''
+
+	DECLARE @SORTER TABLE (
+		INCR INT IDENTITY(1,1)
+		,POSITION int
+		,TAG NVARCHAR(5)
+		,TAG_TYPE NVARCHAR(2)
+		)
+	
+	WHILE 1=1
+	BEGIN
+		--look for <ol> or <ul> tags
+		SET @OL_START = CHARINDEX('<OL>',@szINPUT)
+		SET @OL_END = CHARINDEX('</OL>',@szINPUT)
+		SET @UL_START = CHARINDEX('<UL>',@szINPUT)
+		SET @UL_END = CHARINDEX('</UL>',@szINPUT)
+
+		--if not found then exit
+		IF @OL_START + @UL_START + @OL_END + @UL_END = 0 
+		BEGIN
+			INSERT INTO @HTMLTags_ListMaker (TextSegment) VALUES (@szINPUT)
+			RETURN (SELECT * FROM @HTMLTags_ListMaker FOR XML PATH('ITEMS'), ROOT('LISTMAKER'))
+		END
+
+		--Which Tag comes first?
+		DELETE FROM @SORTER
+		INSERT INTO @SORTER VALUES (@OL_START, '<OL>', 'OL')
+		INSERT INTO @SORTER VALUES (@OL_END, '</OL>','OL')
+		INSERT INTO @SORTER VALUES (@UL_START, '<UL>','UL')
+		INSERT INTO @SORTER VALUES (@UL_END, '</UL>','UL')
+
+		--Figure out what tag cames first 
+		SELECT TOP 1 @FIRST_TAG=POSITION
+			,@FIRST_TAG_NAME=TAG
+			,@FIRST_TAG_TYPE=TAG_TYPE
+		FROM @SORTER 
+		WHERE POSITION>0
+		ORDER BY POSITION ASC
+		
+		IF @FIRST_TAG=1
+		BEGIN
+			SET @TextSegment=SUBSTRING(@szInput,1, LEN(@FIRST_TAG_NAME))
+			SET @szInput=STUFF (@szInput, 1, LEN(@FIRST_TAG_NAME), '')
+		END ELSE BEGIN
+			SET @TextSegment=SUBSTRING(@szInput,1, @FIRST_TAG-1)
+			SET @szInput=STUFF (@szInput, 1, @FIRST_TAG-1, '')
+		END	
+		INSERT INTO @HTMLTags_ListMaker (TextSegment) VALUES (@TextSegment)
+	END
+	RETURN @XML
+END
+GO

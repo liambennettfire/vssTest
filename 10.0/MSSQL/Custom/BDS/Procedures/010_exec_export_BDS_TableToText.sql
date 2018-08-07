@@ -1,0 +1,1 @@
+exec export_BDS_TableToText 'BDS','mongo','qsidba'
