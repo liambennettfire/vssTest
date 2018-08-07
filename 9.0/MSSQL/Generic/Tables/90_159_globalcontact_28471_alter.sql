@@ -1,0 +1,1 @@
+ALTER TABLE globalcontact ADD conversionkey INT NULL

@@ -1,0 +1,1 @@
+ALTER TABLE csprojectupdatetracker ADD PRIMARY KEY (id)

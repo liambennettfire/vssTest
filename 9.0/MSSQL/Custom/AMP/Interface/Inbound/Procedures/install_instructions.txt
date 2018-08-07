@@ -1,0 +1,19 @@
+
+1) Run UpdFld_Baseline_LoadSQL.bat to load the UpdFld stuff. The files might not be in the optimal order and so some might fail initially on dependencies - just make a copy of the batch file and delete the lines out of it that the log file says loaded without error, and then re-run the stuff that did have an error.  Repeat this until all files load.
+
+5) In the EXE directory, edit the config files so any/all connection strings are properly set.
+
+6) Using either Powerpub or directly from SSMS Query Window, create an entry in TM's user Tables under Batch Jobs (gentables tableid=543) with an externalcode of 'AMPtoTM_???' - this is the app ID.
+
+8) Launch the interface batch job console app with the following command line:
+
+	TM_Interface_ImportFromTable.exe T <table name>
+
+
+Note: After the first several minutes of pre-processing for a sizeable job, you won't see anything on the screen to let you know it's still running - something I meant to do but ran out of time - just have to wait (although you can detect by looking to see what the timestamp on the last qsijobmessage was).
+
+
+FOR THIS TEST:
+
+sproc name - AMP_to_TM_test_Interface
+job id - AMPtoTM_test

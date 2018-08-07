@@ -1,0 +1,115 @@
+10-16-03  Althea
+Updating the MSSQL Job Agent Datawarehouse Full Build Job to use ISQL
+
+1) Log On to Enterprise Manager 
+2) Go Into the SQL Server Agent under Management
+3) Open the Full warehouse build job
+4) Go to the Step section and edit this step
+5) In the Type box, select Operating System Command (CmcExec)
+6) in the Command box  enter this line; It is case sensitive so do not change the cases for the (-) minus values
+
+isql -SPSS5 -dPSS5 -Uqsidba -Pqsidba -Q "exec datawarehouse_base_full_uncond"
+
+FOR MSSQL Version 2000   use osql instead of isql
+
+osql -SPSS5 -dPSS5 -Uqsidba -Pqsidba -Q "exec datawarehouse_base_full_uncond"
+
+-S = the Server name usually PSS5 at our Client
+-d = the database name usually PSS5 at our Client  
+-U user id
+-P password
+-Q for the command about to run which is the exec datawarehouse_base_full_uncond in double quotes;
+
+7)  add a step above running the full build... this step should be a Type transact SQL and put all the grants
+there.... all the grant syntax are at the end of this file.
+
+step 7 is for safety...Since we probably do not know the SA password, I used the qsidba ID and password, 
+the ID may also be QSIADMIN,so use whichever ID you know is valid at the client.
+
+The SQL below grant the valid QSI ID execute privelege on all the warehouse stored procedure.
+If qsidba is not the valid ID,please replace ID 
+
+That's it ..
+Good luck
+
+grant execute on dbo.datawarehouse_aopo to qsidba
+
+grant execute on dbo.datawarehouse_audience to qsidba
+
+grant execute on dbo.datawarehouse_author to qsidba
+
+grant execute on dbo.datawarehouse_base_full_cond to qsidba
+
+grant execute on dbo.datawarehouse_base_full_uncond to qsidba
+
+grant execute on dbo.datawarehouse_base_incr to qsidba
+
+grant execute on dbo.datawarehouse_bisac to qsidba
+
+grant execute on dbo.datawarehouse_bookcmnt_parse to qsidba
+
+grant execute on dbo.datawarehouse_bookcomment to qsidba
+
+grant execute on dbo.datawarehouse_bookcustom to qsidba
+
+grant execute on dbo.datawarehouse_bookdates to qsidba
+
+grant execute on dbo.datawarehouse_bookfiles to qsidba
+
+grant execute on dbo.datawarehouse_bookinfo to qsidba
+
+grant execute on dbo.datawarehouse_bookprice to qsidba
+
+grant execute on dbo.datawarehouse_bookrole to qsidba
+
+grant execute on dbo.datawarehouse_camspec to qsidba
+
+grant execute on dbo.datawarehouse_catalog to qsidba
+
+grant execute on dbo.datawarehouse_catalogtitle to qsidba
+
+grant execute on dbo.datawarehouse_category to qsidba
+
+grant execute on dbo.datawarehouse_cce to qsidba
+
+grant execute on dbo.datawarehouse_cfpo_bind to qsidba
+
+grant execute on dbo.datawarehouse_cfpo_print to qsidba
+
+grant execute on dbo.datawarehouse_component to qsidba
+
+grant execute on dbo.datawarehouse_estcomp to qsidba
+
+grant execute on dbo.datawarehouse_estcost to qsidba
+
+grant execute on dbo.datawarehouse_estimate to qsidba
+
+grant execute on dbo.datawarehouse_estmaterial to qsidba
+
+grant execute on dbo.datawarehouse_estsigs to qsidba
+
+grant execute on dbo.datawarehouse_estversion to qsidba
+
+grant execute on dbo.datawarehouse_gpocost_sect to qsidba
+
+grant execute on dbo.datawarehouse_materialspecs to qsidba
+
+grant execute on dbo.datawarehouse_miscspec to qsidba
+
+grant execute on dbo.datawarehouse_orgentry to qsidba
+
+grant execute on dbo.datawarehouse_po to qsidba
+
+grant execute on dbo.datawarehouse_prevauth to qsidba
+
+grant execute on dbo.datawarehouse_printdates2 to qsidba
+
+grant execute on dbo.datawarehouse_printdates to qsidba
+
+grant execute on dbo.datawarehouse_printing to qsidba
+
+grant execute on dbo.datawarehouse_schedule to qsidba
+
+grant execute on dbo.datawarehouse_titlepositioning to qsidba
+
+grant execute on dbo.datawarehouse_xpo to qsidba

@@ -1,0 +1,1 @@
+UPDATE gentables SET qsicode = 2, datacode = 0 WHERE tableid = 562 AND datadesc = LTRIM(RTRIM(LOWER('n/a')))

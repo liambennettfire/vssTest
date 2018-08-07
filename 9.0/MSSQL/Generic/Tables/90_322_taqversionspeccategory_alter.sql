@@ -1,0 +1,3 @@
+alter table taqversionspeccategory
+add taqversionparentspecategorykey int
+go

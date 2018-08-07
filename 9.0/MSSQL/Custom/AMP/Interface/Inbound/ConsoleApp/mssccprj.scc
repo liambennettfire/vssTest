@@ -1,0 +1,5 @@
+SCC = This is a Source Code Control file
+
+[TM_Interface_Inbound.csproj]
+SCC_Aux_Path = "\\mohawk01\vss\DatabaseTest"
+SCC_Project_Name = "$/Development/Database/Ver 9.0/MSSQL/Custom/AMP/Interface/Inbound/ConsoleApp", DTXEAAAA

@@ -1,0 +1,20 @@
+CREATE TABLE HMHMktgCampaignISBNs
+  (processinstancekey INT NOT NULL,
+   isbn	VARCHAR(50) NOT NULL,
+   lastuserid VARCHAR(30) NULL,
+   lastmaintdate DATETIME NULL)
+go
+
+GRANT SELECT ON HMHMktgCampaignISBNs TO PUBLIC
+go
+GRANT INSERT ON HMHMktgCampaignISBNs TO PUBLIC
+go
+GRANT UPDATE ON HMHMktgCampaignISBNs TO PUBLIC
+go
+GRANT DELETE ON HMHMktgCampaignISBNs TO PUBLIC
+go
+
+
+ALTER TABLE HMHMktgCampaignISBNs
+ADD CONSTRAINT HMHMktgCampaignISBNs_qp PRIMARY KEY (processinstancekey)
+go
