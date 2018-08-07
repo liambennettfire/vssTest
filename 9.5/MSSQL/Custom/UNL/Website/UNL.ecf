@@ -1,0 +1,1469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eCF framework="4.0" xmlns:ecf="http://schemas.mediachase.com/ecf/4.0/MasterTemplateSchema.xsd">
+	<ecf:Name>Current</ecf:Name>
+	<ecf:Description />
+	<ecf:Author>admin</ecf:Author>
+	<ecf:Version>1.0</ecf:Version>
+	<ecf:Company />
+	<ecf:Features>
+		<ecf:Feature type="metadata" path="//ecf:MetaData" />
+		<ecf:Feature type="templates" path="//ecf:Theme/ecf:Templates" />
+	</ecf:Features>
+	<ecf:MetaData>
+		<ecf:MetaAttributes>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_FeaturedTitle</ecf:Name>
+				<ecf:FriendlyName>Featured Title</ecf:FriendlyName>
+				<ecf:Description>Featured Title</ecf:Description>
+				<ecf:Type>Boolean</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_PrimaryImage</ecf:Name>
+				<ecf:FriendlyName>Primary Image</ecf:FriendlyName>
+				<ecf:Description>Medium product image</ecf:Description>
+				<ecf:Type>ImageFile</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>createthumbnail</ecf:Name>
+						<ecf:Value>true</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>autoresize</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailwidth</ecf:Name>
+						<ecf:Value>50</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailheight</ecf:Name>
+						<ecf:Value>83</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>stretchthumbnail</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_LargeImage</ecf:Name>
+				<ecf:FriendlyName>Large Image</ecf:FriendlyName>
+				<ecf:Description>Large product image</ecf:Description>
+				<ecf:Type>ImageFile</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>createthumbnail</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>autoresize</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_PrimaryImage</ecf:Name>
+				<ecf:FriendlyName>SKU Primary Image</ecf:FriendlyName>
+				<ecf:Description>Medium sku image</ecf:Description>
+				<ecf:Type>ImageFile</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>createthumbnail</ecf:Name>
+						<ecf:Value>true</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>autoresize</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailwidth</ecf:Name>
+						<ecf:Value>50</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailheight</ecf:Name>
+						<ecf:Value>83</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>stretchthumbnail</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_LargeImage</ecf:Name>
+				<ecf:FriendlyName>SKU Large Image</ecf:FriendlyName>
+				<ecf:Description>Large sku image</ecf:Description>
+				<ecf:Type>ImageFile</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>createthumbnail</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>autoresize</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_featuredtitle_categoryid</ecf:Name>
+				<ecf:FriendlyName>Featured Title CategoryId</ecf:FriendlyName>
+				<ecf:Description>Featured Title CategoryId</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_featuredjournal_categoryid</ecf:Name>
+				<ecf:FriendlyName>Featured Journal CategoryId</ecf:FriendlyName>
+				<ecf:Description>Featured Journal CategoryId</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_webfeature_categorytableid</ecf:Name>
+				<ecf:FriendlyName>pss_webfeature_categorytableid</ecf:FriendlyName>
+				<ecf:Description>pss_webfeature_categorytableid</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_webfeature_datacode</ecf:Name>
+				<ecf:FriendlyName>pss_webfeature_datacode</ecf:FriendlyName>
+				<ecf:Description>pss_webfeature_datacode</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_webfeature_datasubcode</ecf:Name>
+				<ecf:FriendlyName>pss_webfeature_datasubcode</ecf:FriendlyName>
+				<ecf:Description>pss_webfeature_datasubcode</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_subject_categorytableid</ecf:Name>
+				<ecf:FriendlyName>pss_subject_categorytableid</ecf:FriendlyName>
+				<ecf:Description>pss_subject_categorytableid</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_subject_datacode</ecf:Name>
+				<ecf:FriendlyName>pss_subject_datacode</ecf:FriendlyName>
+				<ecf:Description>pss_subject_datacode</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_subject_datasubcode</ecf:Name>
+				<ecf:FriendlyName>pss_subject_datasubcode</ecf:FriendlyName>
+				<ecf:Description>pss_subject_datasubcode</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_sku_bookkey</ecf:Name>
+				<ecf:FriendlyName>pss_sku_bookkey</ecf:FriendlyName>
+				<ecf:Description>pss_sku_bookkey</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_product_bookkey</ecf:Name>
+				<ecf:FriendlyName>pss_product_bookkey</ecf:FriendlyName>
+				<ecf:Description>pss_product_bookkey</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_roletypecode</ecf:Name>
+				<ecf:FriendlyName>Role Type Code</ecf:FriendlyName>
+				<ecf:Description>RoleTypeCode</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>MetaDescription</ecf:Name>
+				<ecf:FriendlyName>Meta Description</ecf:FriendlyName>
+				<ecf:Description>Enter short description</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>MetaKeywords</ecf:Name>
+				<ecf:FriendlyName>Meta Keywords</ecf:FriendlyName>
+				<ecf:Description>Enter comma seperated list of keywords</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Page_Content</ecf:Name>
+				<ecf:FriendlyName>Page Content</ecf:FriendlyName>
+				<ecf:Description>Enter content for the page</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_Title</ecf:Name>
+				<ecf:FriendlyName>Title</ecf:FriendlyName>
+				<ecf:Description>Product Title</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_Full_Title</ecf:Name>
+				<ecf:FriendlyName>Full Title</ecf:FriendlyName>
+				<ecf:Description>Full Product Title</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_Subtitle</ecf:Name>
+				<ecf:FriendlyName>Subtitle</ecf:FriendlyName>
+				<ecf:Description>Product Subtitle</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_Fullauthordisplayname</ecf:Name>
+				<ecf:FriendlyName>Author(s)</ecf:FriendlyName>
+				<ecf:Description>Product full author display name</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_LargeToThumbImage</ecf:Name>
+				<ecf:FriendlyName>Large to Thumb Image</ecf:FriendlyName>
+				<ecf:Description>Large to Thumb Product Image</ecf:Description>
+				<ecf:Type>ImageFile</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>createthumbnail</ecf:Name>
+						<ecf:Value>true</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>autoresize</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailwidth</ecf:Name>
+						<ecf:Value>50</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailheight</ecf:Name>
+						<ecf:Value>83</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>stretchthumbnail</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Product_LargeToMediumImage</ecf:Name>
+				<ecf:FriendlyName>Large to medium image</ecf:FriendlyName>
+				<ecf:Description>Large to medium product image</ecf:Description>
+				<ecf:Type>ImageFile</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>createthumbnail</ecf:Name>
+						<ecf:Value>true</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>autoresize</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailwidth</ecf:Name>
+						<ecf:Value>100</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailheight</ecf:Name>
+						<ecf:Value>152</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>stretchthumbnail</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_LargeToThumbImage</ecf:Name>
+				<ecf:FriendlyName>Large to Thumb Image</ecf:FriendlyName>
+				<ecf:Description>Large to Thumb SKU Image</ecf:Description>
+				<ecf:Type>ImageFile</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>createthumbnail</ecf:Name>
+						<ecf:Value>true</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>autoresize</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailwidth</ecf:Name>
+						<ecf:Value>50</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailheight</ecf:Name>
+						<ecf:Value>83</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>stretchthumbnail</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_LargeToMediumImage</ecf:Name>
+				<ecf:FriendlyName>Large to medium image</ecf:FriendlyName>
+				<ecf:Description>Large to medium SKU image</ecf:Description>
+				<ecf:Type>ImageFile</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>createthumbnail</ecf:Name>
+						<ecf:Value>true</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>autoresize</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailwidth</ecf:Name>
+						<ecf:Value>100</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>thumbnailheight</ecf:Name>
+						<ecf:Value>152</ecf:Value>
+					</ecf:Property>
+					<ecf:Property>
+						<ecf:Name>stretchthumbnail</ecf:Name>
+						<ecf:Value>false</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_ISBN</ecf:Name>
+				<ecf:FriendlyName>ISBN</ecf:FriendlyName>
+				<ecf:Description>SKU ISBN</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_EAN</ecf:Name>
+				<ecf:FriendlyName>EAN</ecf:FriendlyName>
+				<ecf:Description>SKU EAN</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Display</ecf:Name>
+				<ecf:FriendlyName>Display</ecf:FriendlyName>
+				<ecf:Description>SKU Display</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Title</ecf:Name>
+				<ecf:FriendlyName>Title</ecf:FriendlyName>
+				<ecf:Description>SKU Title</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Full_Title</ecf:Name>
+				<ecf:FriendlyName>Full Title</ecf:FriendlyName>
+				<ecf:Description>SKU Full Title</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Subtitle</ecf:Name>
+				<ecf:FriendlyName>subtitle</ecf:FriendlyName>
+				<ecf:Description>SKU Subtitle</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Format</ecf:Name>
+				<ecf:FriendlyName>Format</ecf:FriendlyName>
+				<ecf:Description>SKU format description</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_pagecount</ecf:Name>
+				<ecf:FriendlyName>Pagecount</ecf:FriendlyName>
+				<ecf:Description>SKU page count</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_season</ecf:Name>
+				<ecf:FriendlyName>Season</ecf:FriendlyName>
+				<ecf:Description>SKU season description</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_PubYear</ecf:Name>
+				<ecf:FriendlyName>Publication Year</ecf:FriendlyName>
+				<ecf:Description>SKU publication year</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Discount</ecf:Name>
+				<ecf:FriendlyName>Discount</ecf:FriendlyName>
+				<ecf:Description>SKU Discount description</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Series</ecf:Name>
+				<ecf:FriendlyName>Series</ecf:FriendlyName>
+				<ecf:Description>SKU series description</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_fullauthordisplayname</ecf:Name>
+				<ecf:FriendlyName>Author(s)</ecf:FriendlyName>
+				<ecf:Description>SKU full author display name</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Description_Comment</ecf:Name>
+				<ecf:FriendlyName>Book Description</ecf:FriendlyName>
+				<ecf:Description>SKU </ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_About_Author_Comment</ecf:Name>
+				<ecf:FriendlyName>About Author</ecf:FriendlyName>
+				<ecf:Description>SKU </ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>pss_globalcontactkey</ecf:Name>
+				<ecf:FriendlyName>pss_globalcontactkey</ecf:FriendlyName>
+				<ecf:Description>Contributor Idenification Number</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Contributor_First_Name</ecf:Name>
+				<ecf:FriendlyName>First Name</ecf:FriendlyName>
+				<ecf:Description>Contributor First Name</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Contributor_Middle_Name</ecf:Name>
+				<ecf:FriendlyName>Middle Name</ecf:FriendlyName>
+				<ecf:Description>Contributor Middle Name</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Contributor_Last_Name</ecf:Name>
+				<ecf:FriendlyName>Last Name</ecf:FriendlyName>
+				<ecf:Description>Contributor Last Name</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Contributor_Display_Name</ecf:Name>
+				<ecf:FriendlyName>Display Name</ecf:FriendlyName>
+				<ecf:Description>Contributor Display Name</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Contributor_Primary_Ind</ecf:Name>
+				<ecf:FriendlyName>Primary Ind</ecf:FriendlyName>
+				<ecf:Description>Contributor Primary Indicator</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Contributor_Sort_Order</ecf:Name>
+				<ecf:FriendlyName>SortOrder</ecf:FriendlyName>
+				<ecf:Description>Contributor Sort Order</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Contributor_Type</ecf:Name>
+				<ecf:FriendlyName>Contributor Type</ecf:FriendlyName>
+				<ecf:Description>Contributor Type</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>AuthorMetaKeywords</ecf:Name>
+				<ecf:FriendlyName>Author Meta Keywords</ecf:FriendlyName>
+				<ecf:Description>Enter comma seperated list of authors</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Edition</ecf:Name>
+				<ecf:FriendlyName>Edition</ecf:FriendlyName>
+				<ecf:Description>Edition</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_Project_Muse_Description</ecf:Name>
+				<ecf:FriendlyName>Project Muse Description</ecf:FriendlyName>
+				<ecf:Description>Project Muse Description</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_Jstor_Description</ecf:Name>
+				<ecf:FriendlyName>Project Jstor Description</ecf:FriendlyName>
+				<ecf:Description>Project Jstor Description</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_Home_Contact_List</ecf:Name>
+				<ecf:FriendlyName>Journal Home Contact List</ecf:FriendlyName>
+				<ecf:Description>Journal Home Contact List</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_TOC</ecf:Name>
+				<ecf:FriendlyName>Journal Table of Contents</ecf:FriendlyName>
+				<ecf:Description>Journal Table of Contents</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_Jstor_Ind</ecf:Name>
+				<ecf:FriendlyName>Journal_Jstor_Ind</ecf:FriendlyName>
+				<ecf:Description>Journal_Jstor_Ind</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_JournalEditor</ecf:Name>
+				<ecf:FriendlyName>Journal_JournalEditor</ecf:FriendlyName>
+				<ecf:Description>Journal_JournalEditor</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_SubmissionGuidelines</ecf:Name>
+				<ecf:FriendlyName>Journal_SubmissionGuidelines</ecf:FriendlyName>
+				<ecf:Description>Journal_SubmissionGuidelines</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_MostRecentVolIssue</ecf:Name>
+				<ecf:FriendlyName>Journal_MostRecentVolIssue</ecf:FriendlyName>
+				<ecf:Description>Journal_MostRecentVolIssue</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_ISSN</ecf:Name>
+				<ecf:FriendlyName>Journal_ISSN</ecf:FriendlyName>
+				<ecf:Description>Journal_ISSN</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_SingleIssueAvail</ecf:Name>
+				<ecf:FriendlyName>Journal_SingleIssueAvail</ecf:FriendlyName>
+				<ecf:Description>Journal_SingleIssueAvail</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Awards</ecf:Name>
+				<ecf:FriendlyName>SKU_Awards</ecf:FriendlyName>
+				<ecf:Description>SKU_Awards</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_SubsidyCreditLine</ecf:Name>
+				<ecf:FriendlyName>SKU_SubsidyCreditLine</ecf:FriendlyName>
+				<ecf:Description>SKU_SubsidyCreditLine</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_PromotionalPrice</ecf:Name>
+				<ecf:FriendlyName>Promotional Price</ecf:FriendlyName>
+				<ecf:Description>Promotional Price</ecf:Description>
+				<ecf:Type>Money</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>UNP_News</ecf:Name>
+				<ecf:FriendlyName>UNP News</ecf:FriendlyName>
+				<ecf:Description>UNP News</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Special_Offers</ecf:Name>
+				<ecf:FriendlyName>Special Offers</ecf:FriendlyName>
+				<ecf:Description>Special Offers</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Special_Messages</ecf:Name>
+				<ecf:FriendlyName>Special Messages</ecf:FriendlyName>
+				<ecf:Description>Special Messages</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>featuredproduct_categoryid</ecf:Name>
+				<ecf:FriendlyName>featuredproduct_categoryid</ecf:FriendlyName>
+				<ecf:Description>featuredproduct_categoryid</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>newthismonth_categoryid</ecf:Name>
+				<ecf:FriendlyName>newthismonth_categoryid</ecf:FriendlyName>
+				<ecf:Description>newthismonth_categoryid</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>False</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>IsJournal</ecf:Name>
+				<ecf:FriendlyName>IsJournal</ecf:FriendlyName>
+				<ecf:Description>IsJournal</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Digital_Press_Kit</ecf:Name>
+				<ecf:FriendlyName>Digital_Press_Kit</ecf:FriendlyName>
+				<ecf:Description>Digital_Press_Kit</ecf:Description>
+				<ecf:Type>File</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Excerpt</ecf:Name>
+				<ecf:FriendlyName>Excerpt</ecf:FriendlyName>
+				<ecf:Description>Excerpt</ecf:Description>
+				<ecf:Type>File</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Web_Document</ecf:Name>
+				<ecf:FriendlyName>Web_Document</ecf:FriendlyName>
+				<ecf:Description>Web_Document</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Society_Web_Site</ecf:Name>
+				<ecf:FriendlyName>Society_Web_Site</ecf:FriendlyName>
+				<ecf:Description>Society_Web_Site</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Author_Web_Page</ecf:Name>
+				<ecf:FriendlyName>Author_Web_Page</ecf:FriendlyName>
+				<ecf:Description>Author_Web_Page</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Web_Page</ecf:Name>
+				<ecf:FriendlyName>Web_Page</ecf:FriendlyName>
+				<ecf:Description>Web_Page</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Praise</ecf:Name>
+				<ecf:FriendlyName>Praise</ecf:FriendlyName>
+				<ecf:Description>Praise</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Online_Journal_Link</ecf:Name>
+				<ecf:FriendlyName>Online Journal Link</ecf:FriendlyName>
+				<ecf:Description>Online Journal Link</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_WebSite</ecf:Name>
+				<ecf:FriendlyName>Journal Web Site</ecf:FriendlyName>
+				<ecf:Description>Journal Website</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_Adveritising</ecf:Name>
+				<ecf:FriendlyName>Journal Advertising</ecf:FriendlyName>
+				<ecf:Description>Journal Advertising</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>never_discount</ecf:Name>
+				<ecf:FriendlyName>Never Discount Flag</ecf:FriendlyName>
+				<ecf:Description>Never Discount Flag</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>AuthorBylinePrePro</ecf:Name>
+				<ecf:FriendlyName>Author byline (pre-pro)</ecf:FriendlyName>
+				<ecf:Description>Author byline (pre-pro)</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>author_first</ecf:Name>
+				<ecf:FriendlyName>Author First Name</ecf:FriendlyName>
+				<ecf:Description>Author First Name</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>author_last</ecf:Name>
+				<ecf:FriendlyName>Author Last Name</ecf:FriendlyName>
+				<ecf:Description>Author Last Name</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Publisher</ecf:Name>
+				<ecf:FriendlyName>Publisher</ecf:FriendlyName>
+				<ecf:Description>Publisher</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>JournalSubscriptionLocation</ecf:Name>
+				<ecf:FriendlyName>Journal Subscription Location</ecf:FriendlyName>
+				<ecf:Description>Journal Subscription Location</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>JournalSubscriptionLength</ecf:Name>
+				<ecf:FriendlyName>Journal Subscription Length</ecf:FriendlyName>
+				<ecf:Description>Journal Subscription Length</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>JournalLibraryRecommendationForm</ecf:Name>
+				<ecf:FriendlyName>Journal Library Recommendation Form</ecf:FriendlyName>
+				<ecf:Description>Journal Library Recommendation Form</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>JournalLibraryRecommendationForm_File</ecf:Name>
+				<ecf:FriendlyName>Journal Library Recommendation Form File</ecf:FriendlyName>
+				<ecf:Description>Journal Library Recommendation Form File</ecf:Description>
+				<ecf:Type>File</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_Interval</ecf:Name>
+				<ecf:FriendlyName>Journals Interval</ecf:FriendlyName>
+				<ecf:Description>Journals Interval</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>JournalsSingleIssues</ecf:Name>
+				<ecf:FriendlyName>Journals Single Issues</ecf:FriendlyName>
+				<ecf:Description>Journals Single Issues</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>JournalAdvertisingLink</ecf:Name>
+				<ecf:FriendlyName>Journal Advertising Link</ecf:FriendlyName>
+				<ecf:Description>Journal Advertising Link</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>IsDiscounted</ecf:Name>
+				<ecf:FriendlyName>IsDiscounted</ecf:FriendlyName>
+				<ecf:Description>IsDiscounted</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>FullPrice</ecf:Name>
+				<ecf:FriendlyName>Full Price</ecf:FriendlyName>
+				<ecf:Description>Full Price</ecf:Description>
+				<ecf:Type>Money</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>PubDate</ecf:Name>
+				<ecf:FriendlyName>Publication Date</ecf:FriendlyName>
+				<ecf:Description>Publication Date</ecf:Description>
+				<ecf:Type>DateTime</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Price_Text</ecf:Name>
+				<ecf:FriendlyName>Price Text</ecf:FriendlyName>
+				<ecf:Description>show when no price exists</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>TitleStatus</ecf:Name>
+				<ecf:FriendlyName>Title Status</ecf:FriendlyName>
+				<ecf:Description>BISAC Title Status</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>AuthorEvents</ecf:Name>
+				<ecf:FriendlyName>Author Events</ecf:FriendlyName>
+				<ecf:Description>Publicity Events</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_muse_Ind</ecf:Name>
+				<ecf:FriendlyName>Journal_muse_Ind</ecf:FriendlyName>
+				<ecf:Description>Journal_muse_Ind</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SeasonalCatalog</ecf:Name>
+				<ecf:FriendlyName>Seasonal Catalog</ecf:FriendlyName>
+				<ecf:Description>Seasonal Catalog</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SeasonalCatalogImage</ecf:Name>
+				<ecf:FriendlyName>Seasonal Catalog Image</ecf:FriendlyName>
+				<ecf:Description>Seasonal Catalog Image</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>SKU_Actual_Insert_Illus</ecf:Name>
+				<ecf:FriendlyName>Insert_Illus</ecf:FriendlyName>
+				<ecf:Description>Insert Illustration</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_IssueInd</ecf:Name>
+				<ecf:FriendlyName>Journal_IssueInd</ecf:FriendlyName>
+				<ecf:Description>Indicates if Record is a Journal Issue</ecf:Description>
+				<ecf:Type>Integer</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>True</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>Journal_Brief_Description</ecf:Name>
+				<ecf:FriendlyName>Journal_Brief_Description</ecf:FriendlyName>
+				<ecf:Description>Journal Brief Description</ecf:Description>
+				<ecf:Type>ShortString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>File_Location_Links</ecf:Name>
+				<ecf:FriendlyName>File Location Links</ecf:FriendlyName>
+				<ecf:Description>Free text field that will house the links generated by the feed from filelocation table in TMM.</ecf:Description>
+				<ecf:Type>LongString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+				<ecf:Properties>
+					<ecf:Property>
+						<ecf:Name>useincomparing</ecf:Name>
+						<ecf:Value>False</ecf:Value>
+					</ecf:Property>
+				</ecf:Properties>
+			</ecf:MetaAttribute>
+			<ecf:MetaAttribute>
+				<ecf:Name>GeneralDescription</ecf:Name>
+				<ecf:FriendlyName>Description</ecf:FriendlyName>
+				<ecf:Description>Description</ecf:Description>
+				<ecf:Type>LongHtmlString</ecf:Type>
+				<ecf:AllowNulls>True</ecf:AllowNulls>
+				<ecf:SaveHistory>False</ecf:SaveHistory>
+				<ecf:AllowSearch>False</ecf:AllowSearch>
+			</ecf:MetaAttribute>
+		</ecf:MetaAttributes>
+		<ecf:MetaClasses>
+			<ecf:MetaClass>
+				<ecf:Name>Titles</ecf:Name>
+				<ecf:Description>All Title Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Books</ecf:FriendlyName>
+				<ecf:ParentClass>Product</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_product_bookkey</ecf:Attribute>
+					<ecf:Attribute>MetaKeywords</ecf:Attribute>
+					<ecf:Attribute>IsJournal</ecf:Attribute>
+					<ecf:Attribute>Publisher</ecf:Attribute>
+					<ecf:Attribute>PubDate</ecf:Attribute>
+					<ecf:Attribute>AuthorMetaKeywords</ecf:Attribute>
+					<ecf:Attribute>Product_Title</ecf:Attribute>
+					<ecf:Attribute>Product_Full_Title</ecf:Attribute>
+					<ecf:Attribute>Product_Subtitle</ecf:Attribute>
+					<ecf:Attribute>Product_Fullauthordisplayname</ecf:Attribute>
+					<ecf:Attribute>Product_LargeToThumbImage</ecf:Attribute>
+					<ecf:Attribute>Product_LargeToMediumImage</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Title_By_Format</ecf:Name>
+				<ecf:Description>All Titles Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Title By Format</ecf:FriendlyName>
+				<ecf:ParentClass>SKU</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_sku_bookkey</ecf:Attribute>
+					<ecf:Attribute>SKU_ISBN</ecf:Attribute>
+					<ecf:Attribute>SKU_EAN</ecf:Attribute>
+					<ecf:Attribute>SKU_Display</ecf:Attribute>
+					<ecf:Attribute>SKU_Title</ecf:Attribute>
+					<ecf:Attribute>SKU_Full_Title</ecf:Attribute>
+					<ecf:Attribute>SKU_Subtitle</ecf:Attribute>
+					<ecf:Attribute>SKU_Format</ecf:Attribute>
+					<ecf:Attribute>SKU_pagecount</ecf:Attribute>
+					<ecf:Attribute>SKU_season</ecf:Attribute>
+					<ecf:Attribute>SKU_PubYear</ecf:Attribute>
+					<ecf:Attribute>SKU_Discount</ecf:Attribute>
+					<ecf:Attribute>SKU_Series</ecf:Attribute>
+					<ecf:Attribute>SKU_fullauthordisplayname</ecf:Attribute>
+					<ecf:Attribute>SKU_Description_Comment</ecf:Attribute>
+					<ecf:Attribute>SKU_About_Author_Comment</ecf:Attribute>
+					<ecf:Attribute>SKU_LargeToThumbImage</ecf:Attribute>
+					<ecf:Attribute>SKU_LargeToMediumImage</ecf:Attribute>
+					<ecf:Attribute>SKU_Edition</ecf:Attribute>
+					<ecf:Attribute>Journal_ISSN</ecf:Attribute>
+					<ecf:Attribute>SKU_Awards</ecf:Attribute>
+					<ecf:Attribute>SKU_SubsidyCreditLine</ecf:Attribute>
+					<ecf:Attribute>Journal_PromotionalPrice</ecf:Attribute>
+					<ecf:Attribute>Digital_Press_Kit</ecf:Attribute>
+					<ecf:Attribute>Excerpt</ecf:Attribute>
+					<ecf:Attribute>Web_Document</ecf:Attribute>
+					<ecf:Attribute>Society_Web_Site</ecf:Attribute>
+					<ecf:Attribute>Author_Web_Page</ecf:Attribute>
+					<ecf:Attribute>Web_Page</ecf:Attribute>
+					<ecf:Attribute>Praise</ecf:Attribute>
+					<ecf:Attribute>never_discount</ecf:Attribute>
+					<ecf:Attribute>AuthorBylinePrePro</ecf:Attribute>
+					<ecf:Attribute>author_first</ecf:Attribute>
+					<ecf:Attribute>author_last</ecf:Attribute>
+					<ecf:Attribute>IsDiscounted</ecf:Attribute>
+					<ecf:Attribute>FullPrice</ecf:Attribute>
+					<ecf:Attribute>PubDate</ecf:Attribute>
+					<ecf:Attribute>TitleStatus</ecf:Attribute>
+					<ecf:Attribute>AuthorEvents</ecf:Attribute>
+					<ecf:Attribute>SKU_Actual_Insert_Illus</ecf:Attribute>
+					<ecf:Attribute>File_Location_Links</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Contributor</ecf:Name>
+				<ecf:Description>Contributor Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Contributor</ecf:FriendlyName>
+				<ecf:ParentClass>Category</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_globalcontactkey</ecf:Attribute>
+					<ecf:Attribute>Contributor_First_Name</ecf:Attribute>
+					<ecf:Attribute>Contributor_Middle_Name</ecf:Attribute>
+					<ecf:Attribute>Contributor_Last_Name</ecf:Attribute>
+					<ecf:Attribute>Contributor_Display_Name</ecf:Attribute>
+					<ecf:Attribute>Contributor_Primary_Ind</ecf:Attribute>
+					<ecf:Attribute>Contributor_Sort_Order</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Contributor_Type_Category</ecf:Name>
+				<ecf:Description>Contributor Type Class</ecf:Description>
+				<ecf:FriendlyName>Contributor Type</ecf:FriendlyName>
+				<ecf:ParentClass>Category</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>Contributor_Type</ecf:Attribute>
+					<ecf:Attribute>pss_roletypecode</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Title_Subject</ecf:Name>
+				<ecf:Description>Subject Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Subject</ecf:FriendlyName>
+				<ecf:ParentClass>Category</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_subject_categorytableid</ecf:Attribute>
+					<ecf:Attribute>pss_subject_datacode</ecf:Attribute>
+					<ecf:Attribute>pss_subject_datasubcode</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Web_Feature</ecf:Name>
+				<ecf:Description>Web_Feature</ecf:Description>
+				<ecf:FriendlyName>Web Feature</ecf:FriendlyName>
+				<ecf:ParentClass>Category</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_webfeature_categorytableid</ecf:Attribute>
+					<ecf:Attribute>pss_webfeature_datacode</ecf:Attribute>
+					<ecf:Attribute>pss_webfeature_datasubcode</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Home</ecf:Name>
+				<ecf:Description>Home</ecf:Description>
+				<ecf:FriendlyName>Home</ecf:FriendlyName>
+				<ecf:ParentClass>Category</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_featuredtitle_categoryid</ecf:Attribute>
+					<ecf:Attribute>featuredproduct_categoryid</ecf:Attribute>
+					<ecf:Attribute>SeasonalCatalog</ecf:Attribute>
+					<ecf:Attribute>SeasonalCatalogImage</ecf:Attribute>
+					<ecf:Attribute>newthismonth_categoryid</ecf:Attribute>
+					<ecf:Attribute>pss_featuredjournal_categoryid</ecf:Attribute>
+					<ecf:Attribute>UNP_News</ecf:Attribute>
+					<ecf:Attribute>Special_Offers</ecf:Attribute>
+					<ecf:Attribute>Special_Messages</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Page_Content_Class</ecf:Name>
+				<ecf:Description>Virtual Page Content Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Page Content</ecf:FriendlyName>
+				<ecf:ParentClass>Page</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>MetaDescription</ecf:Attribute>
+					<ecf:Attribute>MetaKeywords</ecf:Attribute>
+					<ecf:Attribute>Page_Content</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Journals_Home</ecf:Name>
+				<ecf:Description>Journals Home</ecf:Description>
+				<ecf:FriendlyName>Journals Home</ecf:FriendlyName>
+				<ecf:ParentClass>Category</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>Journal_Project_Muse_Description</ecf:Attribute>
+					<ecf:Attribute>Journal_Jstor_Description</ecf:Attribute>
+					<ecf:Attribute>Journal_Home_Contact_List</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Journals</ecf:Name>
+				<ecf:Description>All Journal Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Journals</ecf:FriendlyName>
+				<ecf:ParentClass>Product</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_product_bookkey</ecf:Attribute>
+					<ecf:Attribute>SKU_Description_Comment</ecf:Attribute>
+					<ecf:Attribute>Journal_Interval</ecf:Attribute>
+					<ecf:Attribute>Price_Text</ecf:Attribute>
+					<ecf:Attribute>Journal_muse_Ind</ecf:Attribute>
+					<ecf:Attribute>Journal_Adveritising</ecf:Attribute>
+					<ecf:Attribute>Publisher</ecf:Attribute>
+					<ecf:Attribute>Product_Title</ecf:Attribute>
+					<ecf:Attribute>Journal_WebSite</ecf:Attribute>
+					<ecf:Attribute>Online_Journal_Link</ecf:Attribute>
+					<ecf:Attribute>Product_Full_Title</ecf:Attribute>
+					<ecf:Attribute>JournalLibraryRecommendationForm_File</ecf:Attribute>
+					<ecf:Attribute>Product_Subtitle</ecf:Attribute>
+					<ecf:Attribute>IsJournal</ecf:Attribute>
+					<ecf:Attribute>Product_Fullauthordisplayname</ecf:Attribute>
+					<ecf:Attribute>Product_LargeToThumbImage</ecf:Attribute>
+					<ecf:Attribute>Product_LargeToMediumImage</ecf:Attribute>
+					<ecf:Attribute>MetaKeywords</ecf:Attribute>
+					<ecf:Attribute>AuthorMetaKeywords</ecf:Attribute>
+					<ecf:Attribute>Journal_TOC</ecf:Attribute>
+					<ecf:Attribute>Journal_Jstor_Ind</ecf:Attribute>
+					<ecf:Attribute>Journal_JournalEditor</ecf:Attribute>
+					<ecf:Attribute>Journal_SubmissionGuidelines</ecf:Attribute>
+					<ecf:Attribute>Journal_MostRecentVolIssue</ecf:Attribute>
+					<ecf:Attribute>Journal_SingleIssueAvail</ecf:Attribute>
+					<ecf:Attribute>Journal_IssueInd</ecf:Attribute>
+					<ecf:Attribute>Journal_ISSN</ecf:Attribute>
+					<ecf:Attribute>Journal_Brief_Description</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Journal_by_PriceType</ecf:Name>
+				<ecf:Description>All Journals Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Journal by Price Type</ecf:FriendlyName>
+				<ecf:ParentClass>SKU</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_sku_bookkey</ecf:Attribute>
+					<ecf:Attribute>JournalsSingleIssues</ecf:Attribute>
+					<ecf:Attribute>Journal_IssueInd</ecf:Attribute>
+					<ecf:Attribute>JournalAdvertisingLink</ecf:Attribute>
+					<ecf:Attribute>SKU_Title</ecf:Attribute>
+					<ecf:Attribute>SKU_Full_Title</ecf:Attribute>
+					<ecf:Attribute>JournalSubscriptionLocation</ecf:Attribute>
+					<ecf:Attribute>JournalSubscriptionLength</ecf:Attribute>
+					<ecf:Attribute>SKU_Subtitle</ecf:Attribute>
+					<ecf:Attribute>SKU_pagecount</ecf:Attribute>
+					<ecf:Attribute>author_first</ecf:Attribute>
+					<ecf:Attribute>author_last</ecf:Attribute>
+					<ecf:Attribute>SKU_season</ecf:Attribute>
+					<ecf:Attribute>SKU_PubYear</ecf:Attribute>
+					<ecf:Attribute>AuthorBylinePrePro</ecf:Attribute>
+					<ecf:Attribute>never_discount</ecf:Attribute>
+					<ecf:Attribute>SKU_Discount</ecf:Attribute>
+					<ecf:Attribute>SKU_Series</ecf:Attribute>
+					<ecf:Attribute>SKU_fullauthordisplayname</ecf:Attribute>
+					<ecf:Attribute>SKU_Description_Comment</ecf:Attribute>
+					<ecf:Attribute>SKU_About_Author_Comment</ecf:Attribute>
+					<ecf:Attribute>SKU_LargeToThumbImage</ecf:Attribute>
+					<ecf:Attribute>SKU_LargeToMediumImage</ecf:Attribute>
+					<ecf:Attribute>Journal_ISSN</ecf:Attribute>
+					<ecf:Attribute>SKU_Awards</ecf:Attribute>
+					<ecf:Attribute>SKU_SubsidyCreditLine</ecf:Attribute>
+					<ecf:Attribute>Journal_PromotionalPrice</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Title_Subject_SubCategory</ecf:Name>
+				<ecf:Description>Subject SubCategory Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Subject SubCategory</ecf:FriendlyName>
+				<ecf:ParentClass>Category</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_subject_categorytableid</ecf:Attribute>
+					<ecf:Attribute>pss_subject_datacode</ecf:Attribute>
+					<ecf:Attribute>pss_subject_datasubcode</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+			<ecf:MetaClass>
+				<ecf:Name>Title_Series</ecf:Name>
+				<ecf:Description>Series Attribute Class</ecf:Description>
+				<ecf:FriendlyName>Series</ecf:FriendlyName>
+				<ecf:ParentClass>Category</ecf:ParentClass>
+				<ecf:IncludeAttributes>
+					<ecf:Attribute>pss_subject_categorytableid</ecf:Attribute>
+					<ecf:Attribute>pss_subject_datacode</ecf:Attribute>
+					<ecf:Attribute>pss_subject_datasubcode</ecf:Attribute>
+					<ecf:Attribute>GeneralDescription</ecf:Attribute>
+				</ecf:IncludeAttributes>
+			</ecf:MetaClass>
+		</ecf:MetaClasses>
+	</ecf:MetaData>
+	<ecf:Theme>
+		<ecf:Templates>
+			<ecf:Template type="Product" name="Software Template" ref="Theme/Product/SoftwareTemplate.ascx" />
+			<ecf:Template type="Product" name="Default Template" ref="Theme/Product/InfoTemplate.ascx" />
+			<ecf:Template type="Product" name="Electronics Template" ref="Theme/Product/ElectronicsTemplate.ascx" />
+			<ecf:Template type="Product" name="Apparel Template" ref="Theme/Product/ApparelTemplate.ascx" />
+			<ecf:Template type="Product" name="Book Template" ref="Theme/Product/BookTemplate.ascx" />
+			<ecf:Template type="Product" name="Journal Template" ref="Theme/Product/JournalTemplate.ascx" />
+			<ecf:Template type="Category" name="Category Promo w/Categories Template" ref="Theme/Category/PagingCategoryTemplate.ascx" />
+			<ecf:Template type="Category" name="Category Simple Template" ref="Theme/Category/InfoTemplate.ascx" />
+			<ecf:Template type="Category" name="Category Promo w/Products Template" ref="Theme/Category/PagingProductTemplate.ascx" />
+			<ecf:Template type="Category" name="Category Price Range Products Template" ref="Theme/Category/PriceRangeProductTemplate.ascx" />
+			<ecf:Template type="Category" name="Category Brand Product Template" ref="Theme/Category/BrandProductTemplate.ascx" />
+			<ecf:Template type="Category" name="Category w/Downloads" ref="Theme/Category/DownloadsTemplate.ascx" />
+			<ecf:Template type="Category" name="Home Template" ref="Theme/Category/HomeTemplate.ascx" />
+			<ecf:Template type="Category" name="Journals Home Template" ref="Theme/Category/JournalsHomeTemplate.ascx" />
+			<ecf:Template type="Category" name="Bargain Books Template" ref="Theme/Category/BargainBooksTemplate.ascx" />
+			<ecf:Template type="Page" name="Default Template" ref="Theme/Page/InfoTemplate.ascx" />
+			<ecf:Template type="Page" name="Page Content Template" ref="Theme/Page/PageContentTemplate.ascx" />
+		</ecf:Templates>
+	</ecf:Theme>
+</eCF>

@@ -1,0 +1,7 @@
+ALTER TABLE tmwebprocessinstanceitem
+DROP CONSTRAINT tmwebprocessinstanceitem_qp
+GO
+
+CREATE INDEX tmwebprocessinstanceitem_qp
+ON tmwebprocessinstanceitem (processinstancekey)
+GO

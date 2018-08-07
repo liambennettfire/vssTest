@@ -1,0 +1,6 @@
+sterling
+st$09!
+cd WISFILE
+ascii
+put YTMUPD1.PRN
+quit

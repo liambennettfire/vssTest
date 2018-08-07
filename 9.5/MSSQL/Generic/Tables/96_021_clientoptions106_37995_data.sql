@@ -1,0 +1,4 @@
+UPDATE clientoptions
+SET optionvaluecomment = '1 will allow Contract creation when approving an Acquisition project and create a contract for each Work created, 2 will allow Contract creation when approving an Acquisition project and create a single Contract related to the Master Work, 0 (default) will not create any contracts',
+	optiondescription = 'This will be used to determine if there will be an option presented to the user to create a Contract when approving an Acquisition Project.  If this is a Master Approval, it will also determine whether to create a Master Contract or a Contract for each Work. Option 2 is only used for Master Acquisition approval.'
+WHERE optionid = 106

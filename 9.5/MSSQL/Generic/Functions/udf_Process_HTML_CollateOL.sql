@@ -1,0 +1,56 @@
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_NULLS ON
+GO
+
+IF EXISTS (
+	SELECT *
+	FROM dbo.sysobjects
+	WHERE id = Object_id('dbo.udf_Process_HTML_CollateOL') AND type = 'FN'
+	)
+BEGIN
+	DROP FUNCTION dbo.udf_Process_HTML_CollateOL
+END
+GO
+
+CREATE FUNCTION dbo.udf_Process_HTML_CollateOL (@szINPUT NVARCHAR(max),@NestLevel INT, @COUNTER INT,@StripMode INT)
+RETURNS NVARCHAR(max)
+AS
+BEGIN
+	-- This is for an ordered list (OL) with list items ONLY
+	DECLARE @szOUTPUT NVARCHAR(max)
+	DECLARE @COUNTER_STRING NVARCHAR(max)
+	DECLARE @LI NVARCHAR(4)
+	DECLARE @INDENT NVARCHAR(max)
+	DECLARE @ItemSTART INT
+	
+	SET @szOUTPUT=''
+	SET @COUNTER_STRING=''
+	SET @LI='<LI>'
+	SET @INDENT=''
+	SET @ItemSTART=1
+
+	SET @szOUTPUT = @szINPUT 
+	
+	--Loop to find each <LI>	
+	WHILE @ItemSTART>0
+	BEGIN	
+		SET @COUNTER_STRING=CAST(@COUNTER as NVARCHAR(10))+'.'+CASE WHEN @StripMode=0 THEN CHAR(9) ELSE '&emsp;' END
+		SET @ItemSTART=CHARINDEX(@LI,@szOUTPUT,1)
+		
+		IF @StripMode=0
+		BEGIN
+			SET @INDENT=REPLICATE(CHAR(9), COALESCE(@NestLevel,1)-1)
+		END ELSE 
+		BEGIN
+			SET @INDENT=REPLICATE('&emsp;', 2*COALESCE(@NestLevel,1)-1)
+		END 
+				
+		IF @ItemSTART>0 SET @szOUTPUT = STUFF(@szOUTPUT,@ItemSTART,LEN(@LI),@INDENT+ @COUNTER_STRING)
+		SET @COUNTER=@COUNTER+1
+	END
+		
+	RETURN @szOUTPUT
+END
+GO
